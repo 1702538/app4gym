@@ -3107,6 +3107,26 @@
     }
 </style><noscript data-n-css></noscript>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to display the current date
+      function displayCurrentDate() {
+        const dateElement = document.getElementById('current-date');
+        const date = new Date();
+        
+        // Options for formatting the date
+        const options = { day: '2-digit', month: 'short', year: 'numeric' };
+        const formattedDate = date.toLocaleDateString('en-GB', options);
+        
+        dateElement.textContent = formattedDate;
+      }
+    
+      // Call the function to display the date
+      displayCurrentDate();
+    });
+    </script>
+    
+
 <body class=chakra-ui-light>
     <div id=__next>
         <div class="chakra-stack css-1i8oklr">
@@ -3352,8 +3372,9 @@
                                                                         d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z">
                                                                     </path>
                                                                 </svg>
-                                                                <p class="chakra-text css-fdxd05">1 day ⋅ Expires 28 Aug
-                                                                    2024</p>
+                                                                <p class="chakra-text css-fdxd05">
+                                                                    1 day ⋅ <span id="current-date"></span>
+                                                                  </p>
                                                             </div>
                                                         </div>
                                                     </div>
