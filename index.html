@@ -3108,34 +3108,24 @@
 </style><noscript data-n-css></noscript>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    // Function to display the current date
-    function displayCurrentDate() {
-        const dateElement = document.getElementById('current-date');
-        const date = new Date();
-        
-        // Options for formatting the date
-        const options = { day: '2-digit', month: 'short', year: 'numeric' };
-        const formattedDate = date.toLocaleDateString('en-GB', options);
-        
-        dateElement.textContent = formattedDate;
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to display the current date
+        function displayCurrentDate() {
+            const dateElement = document.getElementById('current-date');
+            const date = new Date();
 
-    // Call the function to display the date
-    displayCurrentDate();
+            // Options for formatting the date
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-GB', options);
 
-    // Intercept all link clicks
-    document.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default browser behavior
+            dateElement.textContent = formattedDate;
+        }
 
-        // Open the link in the current web app context
-        window.location.href = this.href;
-        });
-    });
+        // Call the function to display the date
+        displayCurrentDate();
     });
 </script>
-    
+
 
 <body class=chakra-ui-light>
     <div id=__next>
@@ -3384,7 +3374,7 @@
                                                                 </svg>
                                                                 <p class="chakra-text css-fdxd05">
                                                                     1 day ⋅ <span id="current-date"></span>
-                                                                  </p>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
