@@ -2725,19 +2725,22 @@
     }
 
     // Function to display the current date
-    function displayCurrentDate() {
-        const dateElement = document.getElementById('current-date');
-        const date = new Date();
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to display the current date
+        function displayCurrentDate() {
+            const dateElement = document.getElementById('current-date');
+            const date = new Date();
 
-        // Options for formatting the date
-        const options = { day: '2-digit', month: 'short', year: 'numeric' };
-        const formattedDate = date.toLocaleDateString('en-GB', options);
+            // Options for formatting the date
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-GB', options);
 
-        dateElement.textContent = formattedDate;
-    }
+            dateElement.textContent = formattedDate;
+        }
 
-    // Call the function to display the date
-    displayCurrentDate();
+        // Call the function to display the date
+        displayCurrentDate();
+    });
 </script>
 
 <body class=chakra-ui-light>
@@ -2955,7 +2958,7 @@
                                                     <br /><br />
                                                     <div class=css-dtsc74>
                                                         <p class="chakra-text css-13de7lv">Michael Young Yi Chen
-                                                        <p class="chakra-text css-sqmkkz">Expires 28 Aug 2024</p>
+                                                        <p class="chakra-text css-sqmkkz">Expires <span id="current-date"></span></p>
                                                     </div>
                                                 </div>
                                             </div>
