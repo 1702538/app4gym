@@ -2313,10 +2313,7 @@
         -webkit-box-pack: center;
         justify-content: center;
         flex-direction: column;
-        gap: 0.5rem;
         position: fixed;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
         transform: translateZ(1px);
         z-index: 1
     }
@@ -2661,69 +2658,9 @@
     }
 </style>
 
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    .flip-box {
-        background-color: transparent;
-        width: 300px;
-        height: 200px;
-        border: 1px solid #ffffff;
-        perspective: 1000px;
-        cursor: pointer;
-        margin-bottom: 29px;
-    }
-
-    .flip-box-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.5s;
-        transform-style: preserve-3d;
-    }
-
-    .flip-box-front,
-    .flip-box-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .flip-box-front {
-        background-color: #fff;
-        background-color: transparent;
-        color: black;
-    }
-
-    .flip-box-back {
-        background-color: #fff;
-        background-color: transparent;
-        color: white;
-        transform: rotateY(180deg);
-    }
-
-    .flipped {
-        transform: rotateY(180deg);
-    }
-
-    /* Additional styles for date text */
-    .date-text {
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-</style>
 
 <script>
-    function flipCard(element) {
-        element.querySelector('.flip-box-inner').classList.toggle('flipped');
-    }
-
     // Function to display the current date
     document.addEventListener('DOMContentLoaded', function () {
         // Function to display the current date
@@ -2936,29 +2873,15 @@
                                                             <div class="chakra-stack css-1nz92o8">
 
                                                             </div>
-                                                            <div style=width:100%;height:auto>
-                                                                <!-- <img src="gymgif.gif" style="width:100%;height:auto;"> -->
-                                                                <div class="flip-box" onclick="flipCard(this)">
-                                                                    <div class="flip-box-inner">
-                                                                        <div class="flip-box-front">
-                                                                            <img src="2.gif" alt="gif"
-                                                                                style="width: 100%; height: 139%; border-radius: 15px" />
-                                                                        </div>
-                                                                        <div class="flip-box-back">
-                                                                            <center><img src="QR-modified.png" alt="QR"
-                                                                                    style="width: 90%; height: 139%; border-radius: 30px; margin-top:7px" />
-                                                                            </center>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                            <div style=width:1021;height:auto>
+                                                                <img src="gymgif.gif" style="width:100%;height:auto;">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <br /><br />
                                                     <div class=css-dtsc74>
                                                         <p class="chakra-text css-13de7lv">Keith Chong Zhihan
-                                                        <p class="chakra-text css-sqmkkz">Expires <span id="current-date"></span></p>
+                                                        <p class="chakra-text css-sqmkkz">Expires <span
+                                                                id="current-date"></span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2973,15 +2896,7 @@
                         </div>
                         <div class=css-1ndwyfa>
                             <div class="chakra-stack css-2klqnv">
-                                <p class="chakra-text css-qlwhay">Total passes: 1
-                                <div class=css-1w6ccp1><svg viewBox="0 0 24 24" fill=currentColor height=1em width=1em
-                                        focusable=false class="chakra-icon css-7z7i6w">
-                                        <path
-                                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
-                                        </path>
-                                    </svg>QR codes are currently being used at Tampines only.</div>
-                                <button type="button" class="chakra-button css-rrc4cf"
-                                    onclick="flipCard(document.querySelector('.flip-box'))">Show QR code</button>
+                                <p class="chakra-text css-qlwhay">Total passes: 1</p>
                                 <a class="chakra-button css-1u0ls1j" href=index.html>Back to home</a>
                                 <div class=css-1l4w6pd><a class="chakra-link css-ahhewm"
                                         href=https://activesg.gov.sg/passes/confirmation/aVewCwi6Ij3w8BOhw0NHI>See
